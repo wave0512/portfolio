@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activities | My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo">MyPortfolio</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      menu
+    </button>
+
+    <nav class="nav" id="navMenu">
+      <a href="index.html">About</a>
+      <a href="activities.html" class="active">Activities</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Activity List</h1>
+      <p>A collection of projects, studies, and experiences.</p>
+    </section>
+
+    <section class="section">
+      <div class="activity-grid">
+        <article class="activity-card">
+          <span class="tag">Project</span>
+          <h2>Personal Portfolio Website</h2>
+          <p>
+            Designed and built a responsive portfolio website using HTML,
+            CSS, and JavaScript.
+          </p>
+          <button class="details-btn">View Details</button>
+        </article>
+
+        <article class="activity-card">
+          <span class="tag">Study</span>
+          <h2>JavaScript Practice</h2>
+          <p>
+            Practiced DOM manipulation, events, functions, and basic interactive
+            website features.
+          </p>
+          <button class="details-btn">View Details</button>
+        </article>
+
+        <article class="activity-card">
+          <span class="tag">Design</span>
+          <h2>Responsive UI Design</h2>
+          <p>
+            Learned how to create layouts that work well on desktop, tablet,
+            and mobile screens.
+          </p>
+          <button class="details-btn">View Details</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Activity selected</div>
+
+  <footer>
+    <p>2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
