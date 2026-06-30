@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo">MyPortfolio</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      menu
+    </button>
+
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="active">About</a>
+      <a href="activities.html">Activities</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Hello, I am</p>
+        <h1>Your Name</h1>
+        <p class="subtitle">
+          A student, developer, or designer interested in building clean,
+          useful, and creative digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="activities.html" class="btn primary">View Activities</a>
+          <a href="#about" class="btn secondary">About Me</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="avatar">YN</div>
+        <h2>Your Name</h2>
+        <p>Frontend Beginner</p>
+      </aside>
+    </section>
+
+    <section class="section" id="about">
+      <h2>Self Introduction</h2>
+      <div class="about-grid">
+        <article class="card">
+          <h3>About Me</h3>
+          <p>
+            I enjoy learning web development and creating simple projects
+            using HTML, CSS, and JavaScript. I like clean design, organized
+            layouts, and user-friendly interfaces.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Skills</h3>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Goals</h3>
+          <p>
+            My goal is to keep improving my coding skills and build projects
+            that solve real problems.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
