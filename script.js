@@ -21,18 +21,19 @@ detailButtons.forEach((button) => {
     }, 1800);
   });
 });
+
 const chatForm = document.getElementById("chatForm");
 const chatInput = document.getElementById("chatInput");
 const chatArea = document.getElementById("chatArea");
+const makeWebhookUrl = "https://hook.eu1.make.com/2i530r962bwlhqk7w2vuhvcchxpd0ple";
 
-const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/2i530r962bwlhqk7w2vuhvcchxpd0ple";
-
-function addMessage(text, sender) {
+function addChatMessage(text, sender) {
   const message = document.createElement("div");
   message.className = `chat-message ${sender}`;
   message.textContent = text;
   chatArea.appendChild(message);
   chatArea.scrollTop = chatArea.scrollHeight;
+  return message;
 }
 
 if (chatForm && chatInput && chatArea) {
@@ -42,14 +43,13 @@ if (chatForm && chatInput && chatArea) {
     const userMessage = chatInput.value.trim();
     if (!userMessage) return;
 
-    addMessage(userMessage, "user");
+    addChatMessage(userMessage, "user");
     chatInput.value = "";
 
-    addMessage("답변을 생성하는 중입니다...", "bot");
-    const loadingMessage = chatArea.lastElementChild;
+    const loadingMessage = addChatMessage("답변을 생성하는 중입니다...", "bot");
 
     try {
-      const response = await fetch(MAKE_WEBHOOK_URL, {
+      const response = await fetch(makeWebhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -67,7 +67,7 @@ if (chatForm && chatInput && chatArea) {
       loadingMessage.textContent = data.answer || "답변을 불러오지 못했습니다.";
     } catch (error) {
       loadingMessage.textContent =
-        "오류가 발생했습니다. 잠시 후 다시 시도해주세요.";
+        "연결 오류가 발생했습니다. Make 시나리오가 켜져 있는지 확인해주세요.";
     }
   });
 }
