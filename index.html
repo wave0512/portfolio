@@ -19,32 +19,7 @@
       <a href="activities.html">Activities</a>
     </nav>
   </header>
-<section class="section ai-section">
-  <h2>Ask My AI Assistant</h2>
 
-  <div class="ai-box">
-    <p class="ai-intro">
-      오연경의 포트폴리오, 기술 스택, 프로젝트 경험에 대해 질문해보세요.
-    </p>
-
-    <div class="chat-area" id="chatArea">
-      <div class="chat-message bot">
-        안녕하세요. 포트폴리오에 대해 궁금한 점을 물어보세요.
-      </div>
-    </div>
-
-    <form class="chat-form" id="chatForm">
-      <input
-        type="text"
-        id="chatInput"
-        placeholder="예: 어떤 언어를 할 줄 아나요?"
-        autocomplete="off"
-        required
-      />
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</section>
   <main>
     <section class="hero">
       <div class="hero-content">
@@ -52,7 +27,7 @@
         <h1>오연경</h1>
         <p class="subtitle">
           충남대학교 인공지능학과 학생으로, Python, Java, C 언어를 기반으로
-          문제를 분석하고 구현하는 것을 할 줄 압니다.
+          문제를 분석하고 구현하는 것을 좋아합니다.
         </p>
 
         <div class="hero-actions">
@@ -74,7 +49,7 @@
         <article class="card">
           <h3>About Me</h3>
           <p>
-            저는 인공지능과
+            저는 충남대학교 인공지능학과에 재학 중인 오연경입니다. 인공지능과
             소프트웨어 개발에 관심이 있으며, 배운 내용을 실제 프로젝트로
             구현하는 과정을 즐깁니다.
           </p>
@@ -101,10 +76,36 @@
         </article>
       </div>
     </section>
+
+    <section class="section ai-section" id="ai-assistant">
+      <h2>AI에게 포트폴리오 질문하기</h2>
+      <div class="ai-box">
+        <p class="ai-intro">
+          오연경의 전공, 기술 스택, 웹 프로젝트 경험에 대해 궁금한 점을 물어보세요.
+        </p>
+
+        <div class="chat-area" id="chatArea">
+          <div class="chat-message bot">
+            안녕하세요. 포트폴리오에 대해 궁금한 점을 질문해주세요.
+          </div>
+        </div>
+
+        <form class="chat-form" id="chatForm">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="예: 어떤 프로그래밍 언어를 할 줄 아나요?"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>2026 oh yeonkyung. All rights reserved.</p>
+    <p>2026 오연경. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
